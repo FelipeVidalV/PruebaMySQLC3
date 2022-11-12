@@ -1,5 +1,6 @@
 #creo esquema para el minimarket de José#
 CREATE SCHEMA IF NOT EXISTS minimarket_jose;
+
 #creo todas las tablas (7), ingreso los datos de cada una y establezco sus respectivas PK#
  
  #tabla cliente#
@@ -126,7 +127,7 @@ INSERT INTO minimarket_jose.venta (cliente_id, producto_id) VALUES ('6', '3');
 #visualizo las instancias de la tabla "venta"#
 SELECT * FROM minimarket_jose.venta;
 
-#ingreso cada una de las 12 ventas anteriormente creadas a "ventaAnual e indico que fueron hechas dentro del lapso de un año"#
+#ingreso cada una de las 12 ventas anteriormente creadas a "ventaAnual" e indico que fueron hechas dentro del lapso de un año#
 INSERT INTO minimarket_jose.ventaAnual (periodoInicio, periodoFin, venta_id) VALUES ('2022-01-01', '2022-12-31', 1 );
 INSERT INTO minimarket_jose.ventaAnual (periodoInicio, periodoFin, venta_id) VALUES ('2022-01-01', '2022-12-31', 2 );
 INSERT INTO minimarket_jose.ventaAnual (periodoInicio, periodoFin, venta_id) VALUES ('2022-01-01', '2022-12-31', 3 );
@@ -145,7 +146,7 @@ INSERT INTO minimarket_jose.ventaAnual (periodoInicio, periodoFin, venta_id) VAL
 SELECT * FROM minimarket_jose.ventaAnual;
 
 
-#creo un LEFT JOIN para que me muestre las filas de la tabla izquiera y si coinciden datos con la tabla derecha me los muestre también#
+#creo un LEFT JOIN para que me muestre las filas de la tabla izquierda y si coinciden datos con la tabla derecha me los muestre también#
 #en este caso le hice una consulta para que me mostrara el periodo de un año y los clientes que habían comprado en ese lapso de tiempo#
 #uní las tablas "ventaAnual" y "venta"#
 
